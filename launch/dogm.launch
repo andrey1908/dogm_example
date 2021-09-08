@@ -1,0 +1,20 @@
+<launch>
+
+    <node pkg="dogm_ros" type="dogm_ros_node" name="dogm_ros_node" ns="dogm" output="screen" args="">
+        <remap from="static_map" to="/grid_map" />
+        <remap from="dynamic_map" to="/dynamic_map" />
+        
+        <param name="map/size" value="20.0" />
+        <param name="map/resolution" value="0.2" />
+        <param name="particles/particle_count" value="3e6" />
+        <param name="particles/new_born_particle_count" value="3e5" />
+        <param name="particles/persistence_probability" value="0.99" />
+        <param name="particles/process_noise_position" value="0.1" />
+        <param name="particles/process_noise_velocity" value="1.0" />
+        <param name="particles/birth_probability" value="0.02" />
+        <param name="particles/velocity_persistent" value="30.0" />  <!-- stddev -->
+        <param name="particles/velocity_birth" value="30.0" />  <!-- max (does not work) -->
+    </node>
+
+</launch>
+ 
