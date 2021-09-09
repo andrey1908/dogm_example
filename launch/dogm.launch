@@ -12,8 +12,8 @@
         <param name="particles/process_noise_position" value="0.1" />
         <param name="particles/process_noise_velocity" value="1.0" />
         <param name="particles/birth_probability" value="0.02" />
-        <param name="particles/velocity_persistent" value="30.0" />  <!-- stddev -->
-        <param name="particles/velocity_birth" value="30.0" />  <!-- max (does not work) -->
+        <param name="particles/velocity_persistent" value="30.0" />  <!-- stddev for new born particles -->
+        <param name="particles/velocity_birth" value="30.0" />  <!-- max for initialization only -->
     </node>
 
 </launch>
