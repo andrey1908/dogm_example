@@ -1,5 +1,7 @@
 <launch>
 
+    <arg name="opencv_visualization" default="false" />
+
     <node pkg="dogm_ros" type="dogm_ros_node" name="dogm_ros_node" ns="dogm" output="screen" args="">
         <remap from="static_map" to="/grid_map" />
         <remap from="dynamic_map" to="/dynamic_map" />
@@ -14,6 +16,8 @@
         <param name="particles/birth_probability" value="0.02" />
         <param name="particles/velocity_persistent" value="30.0" />  <!-- stddev for new born particles -->
         <param name="particles/velocity_birth" value="30.0" />  <!-- max for initialization only -->
+        
+        <param name="opencv_visualization" value="$(arg opencv_visualization)" />
     </node>
 
 </launch>
