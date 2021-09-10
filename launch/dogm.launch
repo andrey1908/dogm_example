@@ -17,6 +17,7 @@
         <param name="particles/velocity_persistent" value="30.0" />  <!-- stddev for new born particles -->
         <param name="particles/velocity_birth" value="30.0" />  <!-- max for initialization only -->
         
+        <param name="robot_frame_id" value="base_link" />
         <param name="opencv_visualization" value="$(arg opencv_visualization)" />
     </node>
 
