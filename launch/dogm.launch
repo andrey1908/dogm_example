@@ -6,6 +6,7 @@
         <remap from="static_map" to="/grid_map" />
         <remap from="dynamic_map" to="/dynamic_map" />
         
+        <!-- All distances and velocities are set in cells -->
         <param name="map/size" value="20.0" />
         <param name="map/resolution" value="0.2" />
         <param name="particles/particle_count" value="3e6" />
