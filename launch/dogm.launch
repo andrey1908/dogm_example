@@ -1,6 +1,8 @@
 <launch>
 
     <arg name="opencv_visualization" default="false" />
+    <arg name="vis_occupancy_threshold" default="0.6" />
+    <arg name="vis_mahalanobis_distance" default="1.0" />
 
     <node pkg="dogm_ros" type="dogm_ros_node" name="dogm_ros_node" ns="dogm" output="screen" args="">
         <remap from="static_map" to="/grid_map" />
@@ -20,6 +22,8 @@
         
         <param name="robot_frame_id" value="base_link" />
         <param name="opencv_visualization" value="$(arg opencv_visualization)" />
+        <param name="vis_occupancy_threshold" value="$(arg vis_occupancy_threshold)" />
+        <param name="vis_mahalanobis_distance" value="$(arg vis_mahalanobis_distance)" />
     </node>
 
 </launch>
