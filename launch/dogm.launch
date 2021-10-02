@@ -1,8 +1,11 @@
 <launch>
 
+    <arg name="robot_frame_id" default="base_link" />
+
     <arg name="opencv_visualization" default="false" />
     <arg name="vis_occupancy_threshold" default="0.6" />
     <arg name="vis_mahalanobis_distance" default="1.0" />
+    <arg name="vis_image_size" default="400" />
 
     <node pkg="dogm_ros" type="dogm_ros_node" name="dogm_ros_node" ns="dogm" output="screen" args="">
         <remap from="static_map" to="/grid_map" />
@@ -20,10 +23,12 @@
         <param name="particles/velocity_persistent" value="30.0" />  <!-- stddev for new born particles -->
         <param name="particles/velocity_birth" value="30.0" />  <!-- max for initialization only -->
         
-        <param name="robot_frame_id" value="base_link" />
+        <param name="robot_frame_id" value="$(arg robot_frame_id)" />
+        
         <param name="opencv_visualization" value="$(arg opencv_visualization)" />
         <param name="vis_occupancy_threshold" value="$(arg vis_occupancy_threshold)" />
         <param name="vis_mahalanobis_distance" value="$(arg vis_mahalanobis_distance)" />
+        <param name="vis_image_size" value="$(arg vis_image_size)" />
     </node>
 
 </launch>
