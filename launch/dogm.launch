@@ -1,6 +1,6 @@
 <launch>
 
-    <arg name="robot_frame_id" default="base_link" />
+    <arg name="frame_id" default="base_link" />
 
     <arg name="opencv_visualization" default="false" />
     <arg name="vis_occupancy_threshold" default="0.6" />
@@ -23,7 +23,7 @@
         <param name="particles/velocity_persistent" value="50.0" />  <!-- stddev for new born particles -->
         <param name="particles/velocity_birth" value="50.0" />  <!-- max for initialization only -->
         
-        <param name="robot_frame_id" value="$(arg robot_frame_id)" />
+        <param name="frame_id" value="$(arg frame_id)" />
         
         <param name="opencv_visualization" value="$(arg opencv_visualization)" />
         <param name="vis_occupancy_threshold" value="$(arg vis_occupancy_threshold)" />
