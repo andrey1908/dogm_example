@@ -22,6 +22,7 @@
         <param name="particles/birth_probability" value="0.02" />
         <param name="particles/velocity_persistent" value="50.0" />  <!-- stddev for new born particles -->
         <param name="particles/velocity_birth" value="50.0" />  <!-- max for initialization only -->
+        <param name="cells/freespace_discount" value="0.35" />
 
         <param name="frame_id" value="$(arg frame_id)" />
 
