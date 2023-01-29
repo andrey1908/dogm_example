@@ -16,12 +16,12 @@
         <param name="map/resolution" value="0.1" />
         <param name="particles/particle_count" value="3000000" />
         <param name="particles/new_born_particle_count" value="300000" />
-        <param name="particles/persistence_probability" value="0.99" />
-        <param name="particles/process_noise_position" value="0.1" />
-        <param name="particles/process_noise_velocity" value="0.1" />
-        <param name="particles/birth_probability" value="0.02" />
-        <param name="particles/velocity_persistent" value="50.0" />  <!-- stddev for new born particles -->
-        <param name="particles/velocity_birth" value="50.0" />  <!-- max for initialization only -->
+        <param name="particles/persistence_prob" value="0.99" />
+        <param name="particles/stddev_process_noise_position" value="0.1" />
+        <param name="particles/stddev_process_noise_velocity" value="0.1" />
+        <param name="particles/birth_prob" value="0.02" />
+        <param name="particles/stddev_velocity" value="50.0" />  <!-- stddev for new born particles -->
+        <param name="particles/init_max_velocity" value="50.0" />  <!-- max for initialization only -->
         <param name="cells/freespace_discount" value="0.35" />
 
         <param name="frame_id" value="$(arg frame_id)" />
